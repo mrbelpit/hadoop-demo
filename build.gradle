@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+sourceCompatibility = '1.8'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    //hadoop stuff
+    implementation 'org.apache.hadoop:hadoop-common:3.3.0'
+    implementation 'org.apache.hadoop:hadoop-mapreduce-client-core:3.3.0'
+    implementation 'org.apache.hadoop:hadoop-mapreduce-client-shuffle:3.3.0'
+}
+
+test {
+    useJUnitPlatform()
+}
