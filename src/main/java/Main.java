@@ -14,8 +14,8 @@ public class Main {
     JobConf configuration = new JobConf(Main.class);
     configuration.setJobName("Finding the chattiest character with direct connection to hadoop");
 
-    FileInputFormat.setInputPaths(configuration, new Path("hdfs://localhost:9000/user/root/input"));
-    FileOutputFormat.setOutputPath(configuration,  new Path("hdfs://localhost:9000/user/root/result3"));
+    FileInputFormat.setInputPaths(configuration, new Path(args[0]));
+    FileOutputFormat.setOutputPath(configuration,  new Path(args[1]));
 
     configuration.setOutputKeyClass(Text.class);
     configuration.setOutputValueClass(IntWritable.class);
